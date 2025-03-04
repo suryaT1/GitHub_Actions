@@ -1,0 +1,13 @@
+name: Simple Print Example
+
+on:
+  push:
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  print_message:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hello World
+        run: echo "Hello, GitHub Actions!"
