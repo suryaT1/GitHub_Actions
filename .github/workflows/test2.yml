@@ -1,0 +1,16 @@
+name: Using Env variables 
+env:    #Global ENV variables 
+  username: "Surya"
+  mail: "suryaT1@gmail.com"
+
+on:
+  push:
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  print_message:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hello World
+        run: echo "Hello, $username !, your mail is $mail"
