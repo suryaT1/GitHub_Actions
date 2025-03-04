@@ -4,7 +4,6 @@ env:    #Global ENV variables
   mail: "suryaT1@gmail.com"
 
 on:
-  push:
   workflow_dispatch:  # Allows manual trigger
 
 jobs:
