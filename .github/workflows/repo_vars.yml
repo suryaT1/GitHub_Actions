@@ -1,0 +1,16 @@
+name: using repo variables 
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  firstjob:
+   runs-on: ubuntu-latest
+
+   steps:
+    - name: run the first case
+      run: echo "${{var.company}}"
+     
+    
+  
