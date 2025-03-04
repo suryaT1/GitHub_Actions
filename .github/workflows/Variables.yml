@@ -1,0 +1,49 @@
+name: Workflow for variables type
+
+env:    #Global variables ENV
+  username: "Surya"
+  Greet: "Welcome"
+
+on:
+ push:
+ workflow_dispatch:  #manual interaction
+
+jobs:
+  Env_variables:
+    runs-on: ubuntu_latest
+
+    env:
+      message: "Thankyou for choosing GitHub Actions ! "
+
+    steps:
+      - name: run the first case
+        run: echo $username
+
+      - name: run the second case
+        run: echo $Greet $username
+
+      - name: run the third case
+        run: echo $Greet $username $message
+
+      - name: run the fourth case
+        env:
+          note: "always follow the official github actions page for any info "
+        run: echo $username $note
+
+  Env_variables2:
+    runs-on: ubuntu-latest
+
+    env:
+      message: "Its time to say bye from now "
+       
+    steps:
+      - name: run the second job first case
+        run : echo $username $message
+
+      - name: run the second job second case
+        env:
+          final: "Bye ! bye !"
+        run : echo $username $final
+     
+    
+      
