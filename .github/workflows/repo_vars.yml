@@ -10,7 +10,7 @@ jobs:
 
    steps:
     - name: run the first case
-      run: echo "${{env.company}}"
+      run: echo "${{env.COMPANY}}"
      
     
   
