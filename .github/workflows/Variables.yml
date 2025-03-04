@@ -10,7 +10,7 @@ on:
 
 jobs:
   Env_variables:
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
 
     env:
       message: "Thankyou for choosing GitHub Actions ! "
